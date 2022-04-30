@@ -28,14 +28,14 @@ Take a look at the Movies page we Create => [link](https://math-magics.netlify.a
 
 ## Development set up
 Clone Repository  using 
-`git@github.com:isaacpitwa/math_magicians.git` 
+`git@github.com:isaacpitwa/booklist.git` 
 
 OR  using HTTPS
 
-`https://github.com/isaacpitwa/math_magicians.git` 
+`https://github.com/isaacpitwa/booklist.git` 
 
 move into project directory
-`cd math_magicians`
+`cd booklist`
 
 Install  Project dependancies using `NPM`
 
