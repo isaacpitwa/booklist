@@ -4,26 +4,20 @@ import Book from './Book';
 
 function BooksList(props) {
   const {
-    books, handleChangeProps, deleteTodoProps, setUpdate,
+    books,
   } = props;
 
   BooksList.propTypes = {
     books: PropTypes.arrayOf(
       PropTypes.objectOf(
-        { id: PropTypes.string, title: PropTypes.string },
+        { id: PropTypes.string, title: PropTypes.string, author: PropTypes.string },
       ),
     ),
-    handleChangeProps: PropTypes.func,
-    deleteTodoProps: PropTypes.func,
-    setUpdate: PropTypes.func,
 
   };
 
   BooksList.defaultProps = {
     books: [],
-    handleChangeProps: () => {},
-    deleteTodoProps: () => {},
-    setUpdate: () => {},
   };
 
   return (
@@ -31,10 +25,7 @@ function BooksList(props) {
       {books.map((book) => (
         <Book
           key={book.id}
-          books={book}
-          handleChangeProps={handleChangeProps}
-          deleteTodoProps={deleteTodoProps}
-          setUpdate={setUpdate}
+          book={book}
         />
       ))}
     </ul>

@@ -5,7 +5,7 @@ function Book(props) {
   const {
     book,
   } = props;
-  const { author, title } = book;
+  const { id, author, title } = book;
 
   Book.propTypes = {
     book:
@@ -23,7 +23,7 @@ function Book(props) {
   }, []);
 
   return (
-    <li>
+    <li key={id}>
       {title}
       {' '}
       <br />

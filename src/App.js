@@ -8,6 +8,13 @@ import Categories from './pages/Categories';
 import NotMatch from './pages/NotFound';
 
 function App() {
+  const books = [
+    {
+      id: '1',
+      title: 'Test book one',
+      author: 'Test Author',
+    },
+  ];
   return (
     <>
       <Navbar />
@@ -18,10 +25,11 @@ function App() {
           element={(
             <div className="container">
               <div className="inner">
-                <AddBook />
                 <BooksList
-                  books={[]}
+                  books={books}
                 />
+                <AddBook />
+
               </div>
             </div>
 )}
