@@ -18,12 +18,9 @@ function App() {
           element={(
             <div className="container">
               <div className="inner">
-                <AddBook addBookProps={() => {}} />
+                <AddBook />
                 <BooksList
                   books={[]}
-                  handleChangeProps={() => {}}
-                  deleteTodoProps={() => {}}
-                  setUpdate={() => {}}
                 />
               </div>
             </div>

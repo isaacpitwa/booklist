@@ -10,7 +10,7 @@ function Navbar() {
     },
     {
       id: 2,
-      path: '/category',
+      path: '/categories',
       text: 'Categories',
     },
   ];
