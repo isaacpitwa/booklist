@@ -1,22 +1,11 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
-function AddBook(props) {
-  const {
-    addTodoProps,
-  } = props;
+function AddBook() {
   const [inputText, setInputText] = useState({
     title: '',
+    author: '',
   });
-  AddBook.propTypes = {
-    addTodoProps: PropTypes.func,
-
-  };
-
-  AddBook.defaultProps = {
-    addTodoProps: () => {},
-  };
 
   const onChange = (e) => {
     setInputText({
@@ -27,12 +16,6 @@ function AddBook(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputText.title.trim()) {
-      addTodoProps(inputText.title);
-      setInputText({
-        title: '',
-      });
-    }
   };
 
   return (
@@ -40,7 +23,7 @@ function AddBook(props) {
       <input
         type="text"
         className="input-text"
-        placeholder="Add todo..."
+        placeholder="Book"
         value={inputText.title}
         name="title"
         onChange={onChange}
@@ -48,8 +31,8 @@ function AddBook(props) {
       <input
         type="text"
         className="input-text"
-        placeholder="Add todo..."
-        value={inputText.title}
+        placeholder="Author"
+        value={inputText.author}
         name="title"
         onChange={onChange}
       />
