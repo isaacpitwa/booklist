@@ -28,6 +28,7 @@ function App() {
                 <BooksList
                   books={books}
                 />
+                <hr />
                 <AddBook />
 
               </div>

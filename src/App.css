@@ -5,3 +5,9 @@ ul {
   list-style: none;
   padding: 0;
 }
+nav ul  {
+ display: flex;
+}
+nav ul li {
+  margin-right: 14px;
+}

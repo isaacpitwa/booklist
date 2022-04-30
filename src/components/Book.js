@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import style from './book.module.css';
 
 function Book(props) {
   const {
@@ -23,11 +24,14 @@ function Book(props) {
   }, []);
 
   return (
-    <li key={id}>
+    <li key={id} className={style.book}>
       {title}
       {' '}
       <br />
       {author}
+      <span>
+        <button type="button">Remove</button>
+      </span>
     </li>
   );
 }
