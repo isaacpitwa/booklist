@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import style from './book.module.css';
 
@@ -19,9 +19,6 @@ function Book(props) {
   Book.defaultProps = {
     book: { id: '', title: '', author: '' },
   };
-
-  useEffect(() => () => {
-  }, []);
 
   return (
     <li key={id} className={style.book}>
