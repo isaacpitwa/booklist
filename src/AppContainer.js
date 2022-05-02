@@ -2,9 +2,11 @@ import { connect } from 'react-redux';
 import App from './App';
 import { addNewBook, removeBook } from './redux/books/books';
 
+// gives our App component access to state through props
 function mapStateToProps(state) {
   return {
-    toDoApp: state.toDoApp, // gives our component access to state through props.toDoApp
+    books: state.books,
+    categories: state.categories,
   };
 }
 

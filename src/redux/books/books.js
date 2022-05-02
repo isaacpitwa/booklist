@@ -15,7 +15,11 @@ export function removeBook(book) {
   };
 }
 
-export default function reducer(state = [], action = {}) {
+export default function reducer(state = [{
+  id: '1',
+  title: 'Test book one',
+  author: 'Test Author',
+}], action = {}) {
   switch (action.type) {
     case ADD_NEW_BOOK:
       return [

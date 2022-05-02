@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable react/prefer-stateless-function */
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -7,16 +9,9 @@ import BooksList from './components/BooksList';
 import Categories from './pages/Categories';
 import NotMatch from './pages/NotFound';
 
-class App extends React.Component {
-  books = [
-    {
-      id: '1',
-      title: 'Test book one',
-      author: 'Test Author',
-    },
-  ];
-
+class App extends Component {
   render() {
+    const { books, addNewBook, removeBook } = this.props;
     return (
       <>
         <Navbar />
@@ -28,10 +23,11 @@ class App extends React.Component {
               <div className="container">
                 <div className="inner">
                   <BooksList
-                    books={this.books}
+                    books={books}
+                    removeBookProp={removeBook}
                   />
                   <hr />
-                  <AddBook />
+                  <AddBook addNewBookProp={addNewBook} />
 
                 </div>
               </div>
@@ -44,5 +40,26 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      { id: PropTypes.string, title: PropTypes.string, author: PropTypes.string },
+    ),
+  ),
+  addNewBook: PropTypes.func,
+  removeBook: PropTypes.func,
+
+};
+
+App.defaultProps = {
+  books: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      { id: PropTypes.string, title: PropTypes.string, author: PropTypes.string },
+    ),
+  ),
+  addNewBook: () => {},
+  removeBook: () => {},
+};
 
 export default App;
