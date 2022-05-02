@@ -1,8 +1,11 @@
+import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import categories from './categories/categories';
+import books from './books/books';
 
 export default configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+  reducer: combineReducers({
+    categories,
+    books,
+  }),
 });
