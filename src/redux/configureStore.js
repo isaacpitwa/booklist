@@ -5,11 +5,12 @@ import categories from './categories/categories';
 import books from './books/books';
 
 const loggerMiddleware = createLogger();
+const rootReducer = combineReducers({
+  categories,
+  books,
+});
 export default configureStore({
-  reducer: combineReducers({
-    categories,
-    books,
-  }),
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(loggerMiddleware),
 
 });
