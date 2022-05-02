@@ -7,39 +7,42 @@ import BooksList from './components/BooksList';
 import Categories from './pages/Categories';
 import NotMatch from './pages/NotFound';
 
-function App() {
-  const books = [
+class App extends React.Component {
+  books = [
     {
       id: '1',
       title: 'Test book one',
       author: 'Test Author',
     },
   ];
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          exact
-          element={(
-            <div className="container">
-              <div className="inner">
-                <BooksList
-                  books={books}
-                />
-                <hr />
-                <AddBook />
 
+  render() {
+    return (
+      <>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            exact
+            element={(
+              <div className="container">
+                <div className="inner">
+                  <BooksList
+                    books={this.books}
+                  />
+                  <hr />
+                  <AddBook />
+
+                </div>
               </div>
-            </div>
-)}
-        />
-        <Route path="categories" element={<Categories />} />
-        <Route path="*" element={<NotMatch />} />
-      </Routes>
-    </>
-  );
+            )}
+          />
+          <Route path="categories" element={<Categories />} />
+          <Route path="*" element={<NotMatch />} />
+        </Routes>
+      </>
+    );
+  }
 }
 
 export default App;
