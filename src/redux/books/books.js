@@ -15,23 +15,15 @@ export function removeBook(index) {
   };
 }
 
-const initialState = {
-  books: [],
-};
-
-export default function reducer(state = initialState, action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_NEW_BOOK:
-      return {
+      return [
         ...state,
-        books: [...state.books, action.newBook],
-      };
+        action.newBook,
+      ];
     case REMOVE_BOOK:
-      return {
-
-        ...state,
-        books: state.books.filter((book) => book.id !== action.book.id),
-      };
+      return [...state.filter((book) => book.id !== action.book.id)];
     default:
       return state;
   }
