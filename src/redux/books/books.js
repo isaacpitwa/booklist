@@ -1,17 +1,17 @@
-const ADD_NEW_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ADD_NEW_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-export function addNewBook(index) {
+export function addNewBook(newBook) {
   return {
     type: ADD_NEW_BOOK,
-    index,
+    newBook,
   };
 }
 
-export function removeBook(index) {
+export function removeBook(book) {
   return {
     type: REMOVE_BOOK,
-    index,
+    book,
   };
 }
 

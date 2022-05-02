@@ -1,37 +1,15 @@
-const ADD_NEW_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-export function addNewBook(index) {
+export function checkStatus() {
   return {
-    type: ADD_NEW_BOOK,
-    index,
+    type: CHECK_STATUS,
   };
 }
 
-export function removeBook(index) {
-  return {
-    type: REMOVE_BOOK,
-    index,
-  };
-}
-
-const initialState = {
-  categories: [],
-};
-
-export default function reducer(state = initialState, action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
-    case ADD_NEW_BOOK:
-      return {
-        ...state,
-        books: [...state.books, action.newBook],
-      };
-    case REMOVE_BOOK:
-      return {
-
-        ...state,
-        books: state.books.filter((book) => book.id !== action.book.id),
-      };
+    case CHECK_STATUS:
+      return 'Under construction';
     default:
       return state;
   }
