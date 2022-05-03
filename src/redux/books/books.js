@@ -15,11 +15,24 @@ export function removeBook(book) {
   };
 }
 
-export default function reducer(state = [{
-  id: '1',
-  title: 'Test book one',
-  author: 'Test Author',
-}], action = {}) {
+export default function reducer(state = [
+  {
+    id: '1',
+    title: 'Making of  a man of God',
+    author: 'Isaac Pitwa',
+  },
+  {
+    id: '2',
+    title: 'Making of  a man of God',
+    author: 'Isaac Pitwa',
+  },
+  {
+    id: '3',
+    title: 'Making of  a man of God',
+    author: 'Isaac Pitwa',
+  },
+
+], action = {}) {
   switch (action.type) {
     case ADD_NEW_BOOK:
       return [

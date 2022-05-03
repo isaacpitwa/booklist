@@ -1,10 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Booklist
 
-> "Booklist" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
+> "Booklist" The Bookstore is a website similar to the "Awesome Books" website built in the previous module. You will create an MVP version of it that allows you to:
 
-- Make simple calculations.
-- Read a random math-related quote.
+Display a list of books.
+    - Add a book.
+    - Remove a selected book.
 <!-- 
 ## Live preview
 

@@ -1,11 +1,14 @@
-/* eslint-disable react/jsx-no-constructed-context-values */
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addNewBook } from '../redux/books/books';
 
 function AddBook() {
   const [inputText, setInputText] = useState({
     title: '',
     author: '',
   });
+  const dispatch = useDispatch();
 
   const onChange = (e) => {
     setInputText({
@@ -16,6 +19,15 @@ function AddBook() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(addNewBook({
+      id: uuidv4(),
+      title: inputText.title,
+      author: inputText.author,
+    }));
+    setInputText({
+      title: '',
+      author: '',
+    });
   };
 
   return (
@@ -29,14 +41,16 @@ function AddBook() {
           value={inputText.title}
           name="title"
           onChange={onChange}
+          required
         />
         <input
           type="text"
           className="input-text"
           placeholder="Author"
           value={inputText.author}
-          name="title"
+          name="author"
           onChange={onChange}
+          required
         />
         <button type="submit"> Add Book</button>
       </form>
