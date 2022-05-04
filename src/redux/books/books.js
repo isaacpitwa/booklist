@@ -36,6 +36,11 @@ export const AddNewBooks = (newBook) => async (dispatch) => {
   dispatch(fetchBooks());
 };
 
+export const removeBooks = (book) => async (dispatch) => {
+  await ApiClient.removeBook(book);
+  dispatch(fetchBooks());
+};
+
 export default function reducer(state = [
   {
     id: '1',

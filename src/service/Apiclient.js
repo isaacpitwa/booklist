@@ -26,4 +26,15 @@ export default class ApiClient {
     const responseData = await response.json();
     return responseData;
   };
+
+  static removeBook = async (book) => {
+    const response = await fetch(`${this.BOOKS_URL}/${book.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(book),
+    });
+    return response;
+  };
 }
