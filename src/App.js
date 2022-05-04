@@ -1,6 +1,5 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -11,7 +10,6 @@ import NotMatch from './pages/NotFound';
 
 class App extends Component {
   render() {
-    const { books, addNewBook, removeBook } = this.props;
     return (
       <>
         <Navbar />
@@ -22,12 +20,9 @@ class App extends Component {
             element={(
               <div className="container">
                 <div className="inner">
-                  <BooksList
-                    books={books}
-                    removeBookProp={removeBook}
-                  />
+                  <BooksList />
                   <hr />
-                  <AddBook addNewBookProp={addNewBook} />
+                  <AddBook />
 
                 </div>
               </div>
@@ -40,26 +35,5 @@ class App extends Component {
     );
   }
 }
-
-App.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.objectOf(
-      { id: PropTypes.string, title: PropTypes.string, author: PropTypes.string },
-    ),
-  ),
-  addNewBook: PropTypes.func,
-  removeBook: PropTypes.func,
-
-};
-
-App.defaultProps = {
-  books: PropTypes.arrayOf(
-    PropTypes.objectOf(
-      { id: PropTypes.string, title: PropTypes.string, author: PropTypes.string },
-    ),
-  ),
-  addNewBook: () => {},
-  removeBook: () => {},
-};
 
 export default App;
