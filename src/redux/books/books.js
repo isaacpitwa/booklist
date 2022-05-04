@@ -33,12 +33,12 @@ export const fetchBooks = () => async (dispatch) => {
 
 export const AddNewBooks = (newBook) => async (dispatch) => {
   await ApiClient.addBook(newBook);
-  dispatch(fetchBooks());
+  dispatch(addNewBook({ ...newBook, id: newBook.item_id }));
 };
 
 export const removeBooks = (book) => async (dispatch) => {
   await ApiClient.removeBook(book);
-  dispatch(fetchBooks());
+  dispatch(removeBook({ ...book, id: book.item_id }));
 };
 
 export default function reducer(state = [

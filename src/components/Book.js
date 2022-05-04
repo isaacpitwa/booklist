@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import style from './book.module.css';
-import { removeBook, removeBooks } from '../redux/books/books';
+import { removeBooks } from '../redux/books/books';
 
 function Book(props) {
   const dispatch = useDispatch();
