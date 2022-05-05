@@ -41,24 +41,7 @@ export const removeBooks = (book) => async (dispatch) => {
   dispatch(removeBook({ ...book, id: book.item_id }));
 };
 
-export default function reducer(state = [
-  {
-    id: '1',
-    title: 'Making of  a man of God',
-    author: 'Isaac Pitwa',
-  },
-  {
-    id: '2',
-    title: 'Making of  a man of God',
-    author: 'Isaac Pitwa',
-  },
-  {
-    id: '3',
-    title: 'Making of  a man of God',
-    author: 'Isaac Pitwa',
-  },
-
-], action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_NEW_BOOK:
       return [
