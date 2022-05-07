@@ -41,13 +41,7 @@ export const removeBooks = (book) => async (dispatch) => {
   dispatch(removeBook({ ...book }));
 };
 
-export default function reducer(state = [
-  {
-    author: 'Mark zuckerburg',
-    category: 'default',
-    id: '9433c311-d9d6-41d2-b98a-c4a8a99cd0a0',
-    title: 'Facebook',
-  }], action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_NEW_BOOK:
       return [
