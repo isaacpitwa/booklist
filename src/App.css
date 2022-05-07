@@ -76,6 +76,9 @@ nav .left ul li a.active {
 .addBook h4 {
   margin: 4px ;
   margin-left: 2px;
+  font-family: 'Roboto Slab', serif;
+  color: #c9c9c9;
+  font-weight: 600;
 }
 .addBook input {
 background-color: #fff;
