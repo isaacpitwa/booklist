@@ -2,5 +2,117 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 8px 0;
+  margin: 14px 0;
+  padding: 14px;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  border-radius: 2px;
+  padding-right: 10%;
+}
+h4, h5, h6 {
+  margin: 0 ;
+}
+
+.left h4{
+  font-weight: 700;
+  font-family: 'Roboto Slab', serif;
+  font-size: 21px;
+}
+
+.left p {
+  color: #4386bf;
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Roboto Slab', serif;
+}
+.left span {
+  font-size: 12px;
+  font-family: 'Roboto Slab', serif;
+  color: #c9c9c9;
+  font-weight: 600;
+}
+.left .actions {
+  padding:  16px 0;
+  display: flex;
+}
+.left .action {
+    padding-right: 18px;
+    border: 0;
+    background-color: #fff;
+    border-right:  1px solid #c9c9c9;
+    color: #4386bf;
+    font-weight: 300;
+}
+.left .action:first-child {
+  padding-left: 0;
+}
+.left .action:last-child {
+  border: 0;
+}
+
+.right  h5{
+  color: #c9c9c9;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.right  h6 {
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+.right button {
+  background-color: #4386bf;
+  padding: 8px 21px;
+  width: 100%;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+}
+.progress{
+  display: flex;
+}
+.prog {
+  padding:  0 60px;
+  border-right: 1px solid #c9c9c9;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+.progress .right {
+  padding-left: 60px ;
+}
+
+.progout {
+  width: 120px;
+  height: 120px;
+  background: #4386bf;
+  border-radius: 50%;
+  border: 1px solid #cdcbd0;
+}
+.progin {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 120px;
+  text-align: center;
+  margin-top: 14px;
+  margin-left: 14px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.prog  p {
+  font-size: 21px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.prog  p h6{
+  color: #c9c9c9;
+  font-size: 10px;
+  font-weight: 300;
 }

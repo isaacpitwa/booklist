@@ -6,11 +6,13 @@ import Book from './Book';
 function BooksList() {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fetchBooks());
+    // dispatch(fetchBooks());
   }, [dispatch]);
+
   return (
-    <ul>
+    <ul className="booklist">
       { books.map((book) => (
         <Book
           key={book.id}

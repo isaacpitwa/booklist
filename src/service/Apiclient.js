@@ -16,7 +16,7 @@ export default class ApiClient {
     return response;
   };
 
-  static fetchBooks = async () => {
+  static fetchAPIBooks = async () => {
     const response = await fetch(this.BOOKS_URL, {
       method: 'GET',
       headers: {

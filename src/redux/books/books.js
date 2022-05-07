@@ -27,7 +27,7 @@ export function fetchedBooks(books) {
 }
 
 export const fetchBooks = () => async (dispatch) => {
-  const response = await ApiClient.fetchBooks();
+  const response = await ApiClient.fetchAPIBooks();
   dispatch(fetchedBooks(response));
 };
 
@@ -38,10 +38,16 @@ export const AddNewBooks = (newBook) => async (dispatch) => {
 
 export const removeBooks = (book) => async (dispatch) => {
   await ApiClient.removeBook(book);
-  dispatch(removeBook({ ...book, id: book.item_id }));
+  dispatch(removeBook({ ...book }));
 };
 
-export default function reducer(state = [], action = {}) {
+export default function reducer(state = [
+  {
+    author: 'Mark zuckerburg',
+    category: 'default',
+    id: '9433c311-d9d6-41d2-b98a-c4a8a99cd0a0',
+    title: 'Facebook',
+  }], action = {}) {
   switch (action.type) {
     case ADD_NEW_BOOK:
       return [
