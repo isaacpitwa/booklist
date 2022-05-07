@@ -1,12 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Roboto+Slab:wght@400;600&display=swap");
+
+body {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  background-color: #f5f6fa;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 14px 3rem;
+  background-color: #fff;
+  justify-content: space-between;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.nav-bar h3 {
+  margin: 0;
+  color: #0290ff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 ul {
   list-style: none;
   padding: 0;
 }
 
-nav ul {
+nav .left {
   display: flex;
+  align-items: center;
 }
 
-nav ul li {
-  margin-right: 14px;
+nav .left ul {
+  display: flex;
+  margin-left: 3rem;
+}
+
+nav .left ul li {
+  margin-right: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav .left ul li a {
+  text-decoration: none;
+  color: #c9c9c9;
+}
+
+nav .left ul li a.active {
+  color: #5c5c5c;
+}
+
+.account-icon {
+  padding: 8px 11px;
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+}
+
+.user-icon {
+  font-size: 14px;
+  color: #0290ff;
+}
+
+/* Book List */
+
+.booklist {
+  padding: 14px 3rem;
+}
+
+/* AddBook Form */
+.add-book {
+  padding: 14px 3rem;
+}
+
+.add-book h4 {
+  margin: 4px;
+  margin-left: 2px;
+  font-family: "Roboto Slab", serif;
+  color: #c9c9c9;
+  font-weight: 600;
+}
+
+.add-book input {
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  margin-right: 2%;
+  padding: 12px 21px;
+}
+
+.input-text {
+  width: 44%;
+}
+
+.input-author {
+  width: 25%;
+}
+
+.add-book button {
+  background-color: #4386bf;
+  padding: 12px 21px;
+  border: 0;
+  width: 20%;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.add-book form {
+  padding-top: 10px;
 }

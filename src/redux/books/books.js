@@ -27,7 +27,7 @@ export function fetchedBooks(books) {
 }
 
 export const fetchBooks = () => async (dispatch) => {
-  const response = await ApiClient.fetchBooks();
+  const response = await ApiClient.fetchAPIBooks();
   dispatch(fetchedBooks(response));
 };
 
@@ -38,27 +38,10 @@ export const AddNewBooks = (newBook) => async (dispatch) => {
 
 export const removeBooks = (book) => async (dispatch) => {
   await ApiClient.removeBook(book);
-  dispatch(removeBook({ ...book, id: book.item_id }));
+  dispatch(removeBook({ ...book }));
 };
 
-export default function reducer(state = [
-  {
-    id: '1',
-    title: 'Making of  a man of God',
-    author: 'Isaac Pitwa',
-  },
-  {
-    id: '2',
-    title: 'Making of  a man of God',
-    author: 'Isaac Pitwa',
-  },
-  {
-    id: '3',
-    title: 'Making of  a man of God',
-    author: 'Isaac Pitwa',
-  },
-
-], action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_NEW_BOOK:
       return [
