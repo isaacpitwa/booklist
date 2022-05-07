@@ -67,3 +67,37 @@ nav .left ul li a.active {
 .booklist {
   padding: 14px 3rem;
 }
+
+/* AddBook Form */
+.addBook {
+  padding: 14px 3rem;
+
+}
+.addBook h4 {
+  margin: 4px ;
+  margin-left: 2px;
+}
+.addBook input {
+background-color: #fff;
+border: 1px solid #c9c9c9;
+margin-right: 2%;
+padding: 12px 21px;
+
+}
+.input-text {
+  width: 44%;
+}
+.input-author {
+  width: 25%;
+}
+.addBook button {
+  background-color: #4386bf;
+  padding: 12px 21px;
+  border: 0;
+  width: 20%;
+  border-radius: 2px;
+  color: #fff;
+}
+.addBook form {
+  padding-top: 10px;
+}

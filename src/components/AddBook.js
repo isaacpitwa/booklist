@@ -32,7 +32,7 @@ function AddBook() {
   };
 
   return (
-    <>
+    <div className="addBook">
       <h4>Add New Book</h4>
       <form onSubmit={handleSubmit} className="form-container">
         <input
@@ -46,7 +46,7 @@ function AddBook() {
         />
         <input
           type="text"
-          className="input-text"
+          className="input-author"
           placeholder="Author"
           value={inputText.author}
           name="author"
@@ -55,7 +55,7 @@ function AddBook() {
         />
         <button type="submit"> Add Book</button>
       </form>
-    </>
+    </div>
   );
 }
 
