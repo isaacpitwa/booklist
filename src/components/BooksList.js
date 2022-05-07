@@ -8,7 +8,7 @@ function BooksList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // dispatch(fetchBooks());
+    dispatch(fetchBooks());
   }, [dispatch]);
 
   return (

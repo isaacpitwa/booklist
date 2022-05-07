@@ -9,13 +9,16 @@
   border-radius: 2px;
   padding-right: 10%;
 }
-h4, h5, h6 {
-  margin: 0 ;
+
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
-.left h4{
+.left h4 {
   font-weight: 700;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 21px;
 }
 
@@ -23,45 +26,51 @@ h4, h5, h6 {
   color: #4386bf;
   margin: 0;
   font-size: 14px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
+
 .left span {
   font-size: 12px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   color: #c9c9c9;
   font-weight: 600;
 }
+
 .left .actions {
-  padding:  16px 0;
+  padding: 16px 0;
   display: flex;
 }
+
 .left .action {
-    padding-right: 18px;
-    border: 0;
-    background-color: #fff;
-    border-right:  1px solid #c9c9c9;
-    color: #4386bf;
-    font-weight: 300;
+  padding-right: 18px;
+  border: 0;
+  background-color: #fff;
+  border-right: 1px solid #c9c9c9;
+  color: #4386bf;
+  font-weight: 300;
 }
+
 .left .action:first-child {
   padding-left: 0;
 }
+
 .left .action:last-child {
   border: 0;
 }
 
-.right  h5{
+.right h5 {
   color: #c9c9c9;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 300;
 }
 
-.right  h6 {
+.right h6 {
   padding: 8px 0;
   font-size: 14px;
   font-weight: 300;
 }
+
 .right button {
   background-color: #4386bf;
   padding: 8px 21px;
@@ -70,18 +79,21 @@ h4, h5, h6 {
   border-radius: 2px;
   color: #fff;
 }
-.progress{
+
+.progress {
   display: flex;
 }
+
 .prog {
-  padding:  0 60px;
+  padding: 0 60px;
   border-right: 1px solid #c9c9c9;
   display: flex;
   align-items: center;
   gap: 21px;
 }
+
 .progress .right {
-  padding-left: 60px ;
+  padding-left: 60px;
 }
 
 .progout {
@@ -91,6 +103,7 @@ h4, h5, h6 {
   border-radius: 50%;
   border: 1px solid #cdcbd0;
 }
+
 .progin {
   width: 92px;
   height: 92px;
@@ -106,12 +119,12 @@ h4, h5, h6 {
   font-size: 2em;
 }
 
-.prog  p {
+.prog p {
   font-size: 21px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 
-.prog  p h6{
+.prog p h6 {
   color: #c9c9c9;
   font-size: 10px;
   font-weight: 300;

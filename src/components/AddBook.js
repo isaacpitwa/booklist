@@ -32,7 +32,7 @@ function AddBook() {
   };
 
   return (
-    <div className="addBook">
+    <div className="add-book">
       <h4>Add New Book</h4>
       <form onSubmit={handleSubmit} className="form-container">
         <input

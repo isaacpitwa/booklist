@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Roboto+Slab:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Roboto+Slab:wght@400;600&display=swap");
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   background-color: #f5f6fa;
 }
 
@@ -31,18 +31,19 @@ nav .left {
   display: flex;
   align-items: center;
 }
+
 nav .left ul {
   display: flex;
   margin-left: 3rem;
 }
 
-nav .left  ul li {
+nav .left ul li {
   margin-right: 21px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-nav .left  ul li a {
+nav .left ul li a {
   text-decoration: none;
   color: #c9c9c9;
 }
@@ -69,31 +70,34 @@ nav .left ul li a.active {
 }
 
 /* AddBook Form */
-.addBook {
+.add-book {
   padding: 14px 3rem;
-
 }
-.addBook h4 {
-  margin: 4px ;
+
+.add-book h4 {
+  margin: 4px;
   margin-left: 2px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   color: #c9c9c9;
   font-weight: 600;
 }
-.addBook input {
-background-color: #fff;
-border: 1px solid #c9c9c9;
-margin-right: 2%;
-padding: 12px 21px;
 
+.add-book input {
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  margin-right: 2%;
+  padding: 12px 21px;
 }
+
 .input-text {
   width: 44%;
 }
+
 .input-author {
   width: 25%;
 }
-.addBook button {
+
+.add-book button {
   background-color: #4386bf;
   padding: 12px 21px;
   border: 0;
@@ -101,6 +105,7 @@ padding: 12px 21px;
   border-radius: 2px;
   color: #fff;
 }
-.addBook form {
+
+.add-book form {
   padding-top: 10px;
 }
